@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>MosaicViewer</title>
+  <meta name="description" content="MosaicViewer"/>
+  <script src="./js/mosaicViewer.js"></script>
+  <style>
+  body {
+    font: 1.3vw sans-serif;
+    text-align: center;
+  }
+  a,a:hover,a:visited {
+    text-decoration: underline;
+    color: #000;
+  }
+  pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    color: #000;
+    text-align: left;
+  }
+  .thumb { /* in this exmaple it's also the .myMosaicSelector */
+    height: 100px;
+    cursor: pointer;
+    border: 4px solid #FFF;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+  </style>
+</head>
+<body>
+
+  <h1>MosaicViewer by DrSnuggles</h1>
+  <h2>Images by <a href="https://adriana-ehnes.jimdofree.com/" target="_blank">Adriana Ehnes</a></h2>
+  
+  <img src="./img/AdrianaEhnes/40x40_thumb.webp" title="40 x 40" class="thumb"/>
+  <img src="./img/AdrianaEhnes/50x70_thumb.webp" title="50 x 70" ext="jpg" class="thumb"/>
+  <img src="./img/AdrianaEhnes/60x80_thumb.webp" title="60 x 80" ext="jpg" class="thumb"/>
+  <br/>
+  <img src="./img/AdrianaEhnes/tri_1.webp" title="Trilogie 1 / 3" ext="jpg" class="thumb"/>
+  <img src="./img/AdrianaEhnes/tri_2.webp" title="Trilogie 2 / 3" ext="jpg" class="thumb"/>
+  <img src="./img/AdrianaEhnes/tri_3.webp" title="Trilogie 3 / 3" ext="jpg" class="thumb"/>
+  
+  <script>
+    mosaicViewer.init('.thumb')
+  </script>
+
+  <pre>
+    <code>
+&lt;html>
+  &lt;head>
+    &lt;script src="./js/mosaicViewer.js"></script>
+  &lt;/head>
+  &lt;body>
+    ...
+    &lt;img src="yourImageFile_thumb.webp" class="myMosaicSelector"/>
+    ...
+    &lt;script>
+      mosaicViewer.init('.myMosaicSelector')
+    &lt;/script>
+  &lt;/body>
+&lt;/html>
+    </code>
+  </pre>
+
+</body>
+</html>
